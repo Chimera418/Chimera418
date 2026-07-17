@@ -58,9 +58,9 @@ I enjoy experimenting with new technologies, working on side projects, solving c
 
 <p align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=Chimera418&show_icons=true&theme=radical&hide_border=true&count_private=true" />
+<img src="https://github-stats-extended.vercel.app/api?username=Chimera418&show_icons=true&theme=transparent&hide_border=true" />
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Chimera418&layout=compact&theme=radical&hide_border=true" />
+<img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Chimera418&layout=compact&theme=transparent&hide_border=true" />
 
 </p>
 
@@ -69,7 +69,7 @@ I enjoy experimenting with new technologies, working on side projects, solving c
 ## Contribution Graph
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/Chimera418/Chimera418/output/github-contribution-grid-snake-dark.svg" />
+  <img src="https://raw.githubusercontent.com/Chimera418/Chimera418/gh-pages/github-contribution-grid-snake-dark.svg" />
 </p>
 
 ---
