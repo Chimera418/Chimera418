@@ -3,7 +3,7 @@
 <h1 align="center">Hi 👋, I'm Aneesh Sagar Reddy</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=00FF99&center=true&vCenter=true&width=700&lines=CSE+AI+Engineering+Student;Exploring+Technology;Building+Things+I+Find+Interesting;Always+Learning+Something+New" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=00FF99&center=true&vCenter=true&width=700&lines=Probably+doing+something+I+shouldn't;Probably+clicking+yes+on+Claude+Code;Pretending+I+know+what+I'm+doing" />
 </p>
 
 <p align="center">
@@ -49,7 +49,7 @@ I enjoy experimenting with new technologies, working on side projects, solving c
 ## Tech Stack
 
 <p align="center">
-<img src="https://skillicons.dev/icons?i=python,cpp,java,js,ts,html,css,react,nodejs,django,flask,git,github,linux,docker,aws" />
+<img src="https://skillicons.dev/icons?i=python,cpp,java,js,ts,html,css,react,nodejs,django,flask,git,github,linux,docker,aws&perline=8" />
 </p>
 
 ---
@@ -58,9 +58,9 @@ I enjoy experimenting with new technologies, working on side projects, solving c
 
 <p align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=Chimera418&show_icons=true&include_all_commits=true&count_private=true&theme=radical&hide_border=true" />
+<img src="https://github-readme-stats.vercel.app/api?username=Chimera418&show_icons=true&theme=radical&hide_border=true&count_private=true" />
 
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Chimera418&layout=compact&langs_count=8&theme=radical&hide_border=true" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Chimera418&layout=compact&theme=radical&hide_border=true" />
 
 </p>
 
