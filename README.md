@@ -56,11 +56,13 @@ I enjoy experimenting with new technologies, working on side projects, solving c
 
 ## GitHub Stats
 
+## GitHub Stats
+
 <p align="center">
 
-<img src="https://github-stats-extended.vercel.app/api?username=Chimera418&show_icons=true&theme=transparent&hide_border=true" />
+<img src="https://github-stats-extended.vercel.app/api?username=Chimera418&rank_icon=github&show_icons=true&include_all_commits=true&theme=transparent&hide_border=true&title_color=00FF99&icon_color=00FF99" />
 
-<img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Chimera418&layout=compact&theme=transparent&hide_border=true" />
+<img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Chimera418&layout=compact&theme=transparent&hide_border=true&title_color=00FF99&icon_color=00FF99" />
 
 </p>
 
