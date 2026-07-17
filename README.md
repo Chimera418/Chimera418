@@ -7,9 +7,8 @@
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Chimera418&label=Profile%20Views&color=00FF99&style=for-the-badge" />
+  <img src="https://komarev.com/ghpvc/?username=Chimera418&label=Profile%20Views&color=00B377&style=for-the-badge&labelColor=0D1117" />
 </p>
-
 ---
 
 ## About Me
@@ -39,7 +38,7 @@ I enjoy experimenting with new technologies, working on side projects, solving c
 </a>
 
 <a href="https://chimera-realm.foo/">
-<img src="https://img.shields.io/badge/Website-00FF99?style=for-the-badge&logo=googlechrome&logoColor=black"/>
+<img src="https://img.shields.io/badge/Website-0D1117?style=for-the-badge&logo=googlechrome&logoColor=00FF99&labelColor=0D1117&color=0D1117"/>
 </a>
 
 </p>
