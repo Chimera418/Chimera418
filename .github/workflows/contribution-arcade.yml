@@ -1,7 +1,10 @@
 name: Contribution Arcade
 
-# Runs every 5 days at 00:30 UTC, or manually via workflow_dispatch.
+# Runs on push to the test branch, or on schedule / manual dispatch once merged.
 on:
+  push:
+    branches:
+      - test
   schedule:
     - cron: "30 0 1,6,11,16,21,26 * *"
   workflow_dispatch:
