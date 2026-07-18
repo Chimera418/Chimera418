@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <rect width="800" height="200" fill="#0d1117"/>
+  <text x="400" y="110" font-family="monospace" font-size="20" fill="#00ff99" text-anchor="middle">
+    Contribution Arcade — loading...
+  </text>
+  <text x="400" y="140" font-family="monospace" font-size="13" fill="#888" text-anchor="middle">
+    Run the GitHub Action to generate the first game SVG.
+  </text>
+</svg>

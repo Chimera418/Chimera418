@@ -1,0 +1,93 @@
+name: Contribution Arcade
+
+# Runs every 5 days at 00:30 UTC, or manually via workflow_dispatch.
+on:
+  schedule:
+    - cron: "30 0 1,6,11,16,21,26 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  arcade:
+    runs-on: ubuntu-latest
+    name: Generate contribution game SVG
+
+    steps:
+      # ── 1. Checkout main branch ─────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ── 2. Set up Node.js (needed for choose-game.js) ───────────────────────
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # ── 3. Determine which game to render today ─────────────────────────────
+      - name: Choose game
+        id: choose
+        run: node scripts/choose-game.js
+
+      # ── 4a. Snake — uses Platane/snk ────────────────────────────────────────
+      - name: Generate Snake SVG
+        if: steps.choose.outputs.game == 'snake'
+        uses: Platane/snk@v3
+        with:
+          github_user_name: Chimera418
+          outputs: |
+            assets/contribution-game.svg?palette=github-dark
+
+      # ── 4b. Arcade games — uses abozanona/pacman-contribution-graph ─────────
+      - name: Generate Pac-Man SVG
+        if: steps.choose.outputs.game == 'pacman'
+        uses: abozanona/pacman-contribution-graph@main
+        with:
+          github_user_name: Chimera418
+          game: pacman
+          output_file: assets/contribution-game.svg
+
+      - name: Generate Breakout SVG
+        if: steps.choose.outputs.game == 'breakout'
+        uses: abozanona/pacman-contribution-graph@main
+        with:
+          github_user_name: Chimera418
+          game: breakout
+          output_file: assets/contribution-game.svg
+
+      - name: Generate Galaga SVG
+        if: steps.choose.outputs.game == 'galaga'
+        uses: abozanona/pacman-contribution-graph@main
+        with:
+          github_user_name: Chimera418
+          game: galaga
+          output_file: assets/contribution-game.svg
+
+      - name: Generate Puzzle Bobble SVG
+        if: steps.choose.outputs.game == 'puzzle-bobble'
+        uses: abozanona/pacman-contribution-graph@main
+        with:
+          github_user_name: Chimera418
+          game: puzzle-bobble
+          output_file: assets/contribution-game.svg
+
+      - name: Generate Bomberman SVG
+        if: steps.choose.outputs.game == 'bomberman'
+        uses: abozanona/pacman-contribution-graph@main
+        with:
+          github_user_name: Chimera418
+          game: bomberman
+          output_file: assets/contribution-game.svg
+
+      # ── 5. Commit and push the updated SVG ──────────────────────────────────
+      - name: Commit updated SVG
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/contribution-game.svg
+          # Only commit if there's actually a change
+          git diff --cached --quiet || git commit -m "chore: update contribution arcade → ${{ steps.choose.outputs.game }}"
+          git push
