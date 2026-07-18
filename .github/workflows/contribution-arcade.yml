@@ -18,7 +18,7 @@ jobs:
     name: Generate contribution game SVG
 
     steps:
-      # ── 1. Checkout main branch ─────────────────────────────────────────────
+      # ── 1. Checkout repository ──────────────────────────────────────────────
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
@@ -44,48 +44,72 @@ jobs:
           outputs: |
             assets/contribution-game.svg?palette=github-dark
 
-      # ── 4b. Arcade games — uses abozanona/pacman-contribution-graph ─────────
+      # ── 4b. Pac-Man ─────────────────────────────────────────────────────────
       - name: Generate Pac-Man SVG
         if: steps.choose.outputs.game == 'pacman'
         uses: abozanona/pacman-contribution-graph@main
         with:
           github_user_name: Chimera418
-          game: pacman
-          output_file: assets/contribution-game.svg
+          games: pacman
 
+      - name: Copy Pac-Man SVG to assets
+        if: steps.choose.outputs.game == 'pacman'
+        run: cp dist/pacman-contribution-graph.svg assets/contribution-game.svg
+
+      # ── 4c. Breakout ─────────────────────────────────────────────────────────
       - name: Generate Breakout SVG
         if: steps.choose.outputs.game == 'breakout'
         uses: abozanona/pacman-contribution-graph@main
         with:
           github_user_name: Chimera418
-          game: breakout
-          output_file: assets/contribution-game.svg
+          games: breakout
 
+      - name: Copy Breakout SVG to assets
+        if: steps.choose.outputs.game == 'breakout'
+        run: cp dist/breakout-contribution-graph.svg assets/contribution-game.svg
+
+      # ── 4d. Galaga ───────────────────────────────────────────────────────────
       - name: Generate Galaga SVG
         if: steps.choose.outputs.game == 'galaga'
         uses: abozanona/pacman-contribution-graph@main
         with:
           github_user_name: Chimera418
-          game: galaga
-          output_file: assets/contribution-game.svg
+          games: galaga
 
+      - name: Copy Galaga SVG to assets
+        if: steps.choose.outputs.game == 'galaga'
+        run: cp dist/galaga-contribution-graph.svg assets/contribution-game.svg
+
+      # ── 4e. Puzzle Bobble ────────────────────────────────────────────────────
       - name: Generate Puzzle Bobble SVG
         if: steps.choose.outputs.game == 'puzzle-bobble'
         uses: abozanona/pacman-contribution-graph@main
         with:
           github_user_name: Chimera418
-          game: puzzle-bobble
-          output_file: assets/contribution-game.svg
+          games: puzzle-bobble
 
+      - name: Copy Puzzle Bobble SVG to assets
+        if: steps.choose.outputs.game == 'puzzle-bobble'
+        run: cp dist/puzzle-bobble-contribution-graph.svg assets/contribution-game.svg
+
+      # ── 4f. Bomberman ────────────────────────────────────────────────────────
       - name: Generate Bomberman SVG
         if: steps.choose.outputs.game == 'bomberman'
         uses: abozanona/pacman-contribution-graph@main
         with:
           github_user_name: Chimera418
-          game: bomberman
-          output_file: assets/contribution-game.svg
+          games: bomberman
 
-      # ── 5. Commit and push the updated SVG ──────────────────────────────────
+      - name: Copy Bomberman SVG to assets
+        if: steps.choose.outputs.game == 'bomberman'
+        run: cp dist/bomberman-contribution-graph.svg assets/contribution-game.svg
+
+      # ── 5. List dist for debugging (shows what the action actually created) ──
+      - name: List dist directory
+        if: steps.choose.outputs.game != 'snake'
+        run: ls -la dist/ || echo "dist/ not found"
+
+      # ── 6. Commit and push the updated SVG ──────────────────────────────────
       - name: Commit updated SVG
         run: |
           git config user.name  "github-actions[bot]"
