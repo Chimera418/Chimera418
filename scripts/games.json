@@ -1,0 +1,20 @@
+{
+  "snake": {
+    "enabled": true
+  },
+  "pacman": {
+    "enabled": true
+  },
+  "breakout": {
+    "enabled": true
+  },
+  "galaga": {
+    "enabled": true
+  },
+  "puzzle-bobble": {
+    "enabled": true
+  },
+  "bomberman": {
+    "enabled": true
+  }
+}

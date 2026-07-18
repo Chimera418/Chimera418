@@ -65,10 +65,10 @@ I enjoy experimenting with new technologies, working on side projects, solving c
 
 ---
 
-## Contribution Graph
+## Contribution Arcade
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Chimera418/Chimera418/gh-pages/github-contribution-grid-snake-dark.svg" />
+  <img src="./assets/contribution-game.svg" />
 </p>
 
 ---
