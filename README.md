@@ -68,7 +68,7 @@ I enjoy experimenting with new technologies, working on side projects, solving c
 ## Contribution Arcade
 
 <p align="center">
-  <img src="./assets/contribution-game.svg" />
+  <img src="https://raw.githubusercontent.com/Chimera418/Chimera418/main/assets/contribution-game.svg" />
 </p>
 
 ---
